@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+        import { Route, Routes } from 'react-router-dom';
+        import './App.css';
+        import Footer from './Componets/Footer';
+        import Header from './Componets/Header';
+        import Landing from './pages/Landing';
+        import Home from './pages/Home';
+import Wacthistory from './pages/Watchhistory';
 
-export default App;
+        function App() {
+          return (
+            <>
+            <Header/>
+            <div className='container m-5'>
+              <Routes>
+              
+                <Route path='/' element={<Landing/>}/>
+                <Route  path='/home' element={ <Home/>}/>
+                <Route path='/watchhistory' element={<Wacthistory/>}/>
+
+              </Routes>
+            </div>
+
+            <Footer/>
+            </>
+          );
+        }
+
+        export default App;

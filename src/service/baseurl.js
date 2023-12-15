@@ -1,0 +1,1 @@
+export const BASE_URL="https://mediapalyer-jm9f.onrender.com"
